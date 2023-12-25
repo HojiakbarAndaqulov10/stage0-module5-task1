@@ -1,8 +1,10 @@
 package com.epam.mjc.stage0.utils;
 
+import com.epam.mjc.stage0.FridgeAlgorithm;
+
 import java.util.LinkedList;
 
-public class FridgeIml implements Fridge {
+public class FridgeIml implements Fridge, FridgeAlgorithm.Fridge {
 
     private final LinkedList<Actions> actionsQueue = new LinkedList<>();
 
@@ -14,6 +16,36 @@ public class FridgeIml implements Fridge {
     @Override
     public void getMilk() {
         actionsQueue.add(Actions.GET_MILK);
+    }
+
+    @Override
+    public void openFridgeDoor() {
+
+    }
+
+    @Override
+    public boolean checkForMilk() {
+        return false;
+    }
+
+    @Override
+    public void openDoor() {
+
+    }
+
+    @Override
+    public void findMilk() {
+
+    }
+
+    @Override
+    public void takeMilk() {
+
+    }
+
+    @Override
+    public void closeFridgeDoor() {
+
     }
 
     @Override
