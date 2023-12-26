@@ -3,9 +3,7 @@ package com.epam.mjc.stage0;
 import com.epam.mjc.stage0.utils.FridgeIml;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class FridgeAlgorithmTest {
 
@@ -18,14 +16,11 @@ class FridgeAlgorithmTest {
         var actionsQueue = fridge.getActionsQueue();
 
        /* assertAll(
-                () -> assertEquals(0, actionsQueue.size(),
+                () -> assertEquals(2, actionsQueue.size(),
                         "I think we should use 3 actions to get 1 bottle of milk =) "),
-                () -> assertTrue(FridgeIml.Actions.OPEN == actionsQueue.get(0),
-                        "At first, we should open the fridge =)"),
-                () -> assertTrue(FridgeIml.Actions.GET_MILK == actionsQueue.get(1),
-                        "I think that the order is wrong..."),
-                () -> assertTrue(FridgeIml.Actions.CLOSE == actionsQueue.get(2),
-                        "Did you forget to close the fridge? =)")
+                () -> assertSame(FridgeIml.Actions.OPEN, actionsQueue.get(0), "At first, we should open the fridge =)"),
+                () -> assertSame(FridgeIml.Actions.GET_MILK, actionsQueue.get(1), "I think that the order is wrong..."),
+                () -> assertSame(FridgeIml.Actions.CLOSE, actionsQueue.get(2), "Did you forget to close the fridge? =)")
         );*/
 
     }

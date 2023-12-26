@@ -12,7 +12,21 @@ public interface Fridge {
 
     boolean checkForMilk();
 
+    void openDoor();
+
+    void findMilk();
+
     void takeMilk();
 
     void closeFridgeDoor();
+
+    void openFridge();
+
+    boolean checkContents(String milk);
+
+    void takeItem(String milk);
+
+    void closeFridge();
+
+    boolean containsMilk();
 }

@@ -3,71 +3,29 @@ package com.epam.mjc.stage0;
 import com.epam.mjc.stage0.utils.Fridge;
 
 public class FridgeAlgorithm {
+        public void fridgeAlgorithm(Fridge fridge) {
+            // Step 1: Open the fridge
+            fridge.open();
 
-    /**
-     * This is a first task in this module. You need to get milk from a fridge =)
-     * <p>
-     * Call the methods of the Fridge object inside the fridgeAlgorithm method in the required logical order.
-     * P.S All methods of interaction with the fridge can be found inside the {@see Fridge} class.
-     */
-    // Fridge interface definition
-    public interface Fridge {
-        void openDoor();
-        void findMilk();
-        void takeMilk();
+            // Step 2: Check if the milk is inside the fridge
+            if (fridge.containsMilk()) {
+                // Step 3: If milk is present, take it from the fridge
+                fridge.takeMilk();
+                System.out.println("Got the milk!");
 
-        void openFridgeDoor();
-
-        boolean checkForMilk();
-
-        void closeFridgeDoor();
-    }
-
-    // Concrete implementation of the Fridge interface
-    public class MyFridge implements Fridge {
-        @Override
-        public void openDoor() {
-            // Code to open the fridge door
-            System.out.println("At first, we should open the fridge =)");
+                // Step 4: Close the fridge after taking the milk
+                fridge.close();
+            } else {
+                // Step 5: If there is no milk, display a message and still close the fridge
+                System.out.println("No milk found in the fridge!");
+                fridge.close();
+            }
         }
 
-        @Override
-        public void findMilk() {
-            // Code to locate the milk inside the fridge
-            System.out.println("I think we should use 3 actions to get 1 bottle of milk =) ");
-        }
-
-        @Override
-        public void takeMilk() {
-            // Code to take the milk from the fridge
-            System.out.println("Milk is taken from the fridge.");
-        }
-
-        @Override
-        public void openFridgeDoor() {
-
-        }
-
-        @Override
-        public boolean checkForMilk() {
-            return false;
-        }
-
-        @Override
-        public void closeFridgeDoor() {
-
-        }
-    }
-
-    // Class implementing the fridge algorithm
-
-    public void fridgeAlgorithm(Fridge fridge) {
-        fridge.openFridgeDoor();
-
-        if (fridge.checkForMilk()) {
-            fridge.takeMilk();
-        }
-
-        fridge.closeFridgeDoor();
+    public interface fridgeAlgorithm {
     }
 }
+
+
+
+
