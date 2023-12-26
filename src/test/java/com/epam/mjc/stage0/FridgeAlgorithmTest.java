@@ -15,13 +15,13 @@ class FridgeAlgorithmTest {
         fridgeAlgorithm.fridgeAlgorithm(fridge);
         var actionsQueue = fridge.getActionsQueue();
 
-       /* assertAll(
+        assertAll(
                 () -> assertEquals(2, actionsQueue.size(),
                         "I think we should use 3 actions to get 1 bottle of milk =) "),
                 () -> assertSame(FridgeIml.Actions.OPEN, actionsQueue.get(0), "At first, we should open the fridge =)"),
                 () -> assertSame(FridgeIml.Actions.GET_MILK, actionsQueue.get(1), "I think that the order is wrong..."),
                 () -> assertSame(FridgeIml.Actions.CLOSE, actionsQueue.get(2), "Did you forget to close the fridge? =)")
-        );*/
+        );
 
     }
 
